@@ -13,12 +13,18 @@ Objectives:
 * Understand basic DNN training tips.
 * Familiarize yourself with PyTorch.
 
-If you have any questions, please contact the TAs via TA hours, NTU COOL, or email to mlta-2022-spring@googlegroups.com
-
 # Download data
 If the Google Drive links below do not work, you can download data from [Kaggle](https://www.kaggle.com/t/a3ebd5b5542f0f55e828d4f00de8e59a), and upload data manually to the workspace.
 """
 
+"""
+@NingMa
+This code successfully achieved Strong Baseline.
+I optimized the original code by:
+ 1. Feature selection: use sklearn library to select the 24 most relevant 	features, thus reducing the noise.
+ 2. L2 regularization: set the parameter "weight_decay" to avoid overfitting
+ 3. Network structure improvement: use "LeakyReLU()" instead of "ReLU()"; add one more hidden layer
+"""
 !gdown --id '1kLSW_-cW2Huj7bh84YTdimGBOJaODiOS' --output covid.train.csv
 !gdown --id '1iiI5qROrAhZn-o4FPqsE97bMzDEFvIdg' --output covid.test.csv
 
