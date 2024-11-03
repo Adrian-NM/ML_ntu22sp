@@ -25,7 +25,12 @@ In fact, there are other functions that have the same effect, called **Activatio
 After applying the Activation function, the output can be seen as new features, thus our model would be complex.
 ![[2024-10-20 14-48-03 的屏幕截图.png|400]]
 **Deep** Learning: "deep" indicates many hidden layers
- 
+###### Why *Deep*, not *Fat* network?
+Given the same number of parameters, fat + short v.s. thin + tall, which one is better?  -- **Thin + tall wins.**
+Deep network uses parameters effciently by addressing compound information layer by layer.
+Thus, deep network is **more efficient with same parameters** and it is **less likely to be overfitting compared to shallow learning**.
+ ![[2024-11-03 00-31-53 的屏幕截图.png|400]]
+ Deep learning yields highly **complex and structured** models (as depicted in the picture), which excel in tasks requiring complex and structured function mappings (e.g. image, speech recognition...)
 #### Hyperparameters
 - Learning rate
 - Batch size
