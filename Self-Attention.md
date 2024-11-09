@@ -1,4 +1,4 @@
-When the Input is a vector set instead of a single vector (e.g. text, voice, graph ),
+vector sequence as input (e.g. text, voice, graph )
 Self-Attention can process the original vectors to make meaningful within the context:
 ![[2024-11-03 16-07-08 的屏幕截图.png|400]]
 #### Self-Attention structure
@@ -20,13 +20,28 @@ The parallel process of computing $b_i$ can be represented by matrix multiplicat
 - $O$: ouputs, all $b_i$
 
 #### Multi-head Self-attention
-A single Attention Matrix may not be to capture the various types of relationships present within a sequence.
+A single Attention Matrix may not be to capture the various aspects of relationships present within a sequence.
 To address this, we use multiple independent Self-Attention and introduce another matrix $W_o$ to measure the weight of every relevance factor.
 
 #### Positional Encoding
 To add positional information into Self-Attention, enabling the model to understand the sequential natures (e.g. part of speech)
 ...
 
+#### Advanced Self-Attentions
+Self-Attention dominates computation in models like [[Transformer]] because
+- complexity of the attention mechanism, $O(n^2)$ for a sequence of length $n$
+- demands for Multi-head 
+- large sequence lengths
+- ...
+To make it more efficiency, here are some varients of Self-Attention, usually called "xx-former"
+![[Pasted image 20241103215131.png|400]]
+- Local Attention / Truncated Attention
+	Only pay attention to the closest tokens in the sequence, similiear with [[CNN]]
+- Stride Attention
+- Global Attention
+- Longformer: Local + Stride + Global
+- Big Bird: Longerformer + Random Attention
+- ...
 #### Self-Attention applications
 1. NLP
 2. Speech
@@ -38,7 +53,5 @@ To add positional information into Self-Attention, enabling the model to underst
 4. Graph
 	- becomes one type of Graph Neural Network (GNN)
 
-So many versions of Self-Attention, usually called "xx-former"
-![[Pasted image 20241103215131.png|400]]
 
 
